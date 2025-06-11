@@ -15,7 +15,7 @@ A command-line tool that provides an intuitive interface for monitoring Bitbucke
 
 ```bash
 # Clone this repository
-git clone https://github.com/yourusername/bitbucket-pipeline-monitor.git
+git clone https://github.com/lparisi/bitbucket-pipeline-monitor.git
 cd bitbucket-pipeline-monitor
 
 # Install dependencies using uv

@@ -13,12 +13,12 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 setup(
     name="bitbucket-pipeline-monitor",
     version="0.1.0",
-    author="Your Name",
+    author="Lucas Parisi",
     author_email="your.email@example.com",
     description="A CLI tool for monitoring Bitbucket pipeline executions",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/bitbucket-pipeline-monitor",
+    url="https://github.com/lparisi/bitbucket-pipeline-monitor",
     packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
