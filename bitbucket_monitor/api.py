@@ -14,6 +14,7 @@ load_dotenv()
 class BitbucketAPIClient:
     """Client for interacting with the Bitbucket API."""
     
+    # Default to Bitbucket Cloud API
     BASE_URL = "https://api.bitbucket.org/2.0"
     
     def __init__(self) -> None:
@@ -22,6 +23,11 @@ class BitbucketAPIClient:
         self.app_password = os.getenv("BITBUCKET_APP_PASSWORD")
         self.workspace = os.getenv("BITBUCKET_WORKSPACE")
         self.access_token = os.getenv("BITBUCKET_ACCESS_TOKEN")
+        
+        # For Bitbucket Server/Data Center
+        self.server_url = os.getenv("BITBUCKET_SERVER_URL")
+        if self.server_url:
+            self.BASE_URL = f"{self.server_url}/rest/api/1.0"
         
         if not ((self.username and self.app_password) or (self.workspace and self.access_token)):
             raise ValueError(

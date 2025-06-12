@@ -78,7 +78,7 @@ def monitor_pipeline(
                     # If pipeline is completed, stop refreshing
                     if pipeline and pipeline.status in ["COMPLETED", "SUCCESSFUL", "FAILED", "STOPPED", "ERROR"]:
                         status_color = display._get_status_color(pipeline.status)
-                        console.print(f"\n[bold]Pipeline completed with status: [bold {status_color}]{pipeline.status}[/]")
+                        console.print(f"\n[bold]Pipeline completed with status: [{status_color}]{pipeline.status}[/]")
                         break
             except KeyboardInterrupt:
                 console.print("\n[bold]Monitoring stopped.[/bold]")
